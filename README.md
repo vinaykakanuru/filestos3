@@ -4,7 +4,7 @@
 
 • A simple and basic Web application to upload files to **_AWS S3_** and access the files using **_S3 URL_**.
 
-• It helps you in deploying Django Application to **_AWS Lambda_** using Library **_zappa_** library.
+• It helps you in deploying Django Application to **_AWS Lambda_** using **_zappa_** library.
 
 • You need to create an account in **_http://console.aws.amazon.com_** in order to access AWS.
 
@@ -22,7 +22,7 @@ $ zappa deploy <envt>
 
 • If you see the below error then  
 Error: Warning! Status check on the deployed lambda failed. A GET request to '/' yielded a 500 response code.
-(Sometime you can find SQLITE version issue. Use compatible Version or use AWS RDS service for DB)
+(Sometimes you can find SQLITE version issue. Use compatible Version or you can go with AWS RDS for DB)
 
 ```sh
 $ zappa tail
