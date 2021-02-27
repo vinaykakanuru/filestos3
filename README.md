@@ -8,24 +8,33 @@
 
 • You need to create an account in **_http://console.aws.amazon.com_** in order to access AWS.
 
-• Create a **_IAM user_** through AWS Console and add _*IAM Full Access*_ permission and create a new policy with **_AWS text file_** and attach to the user.
+• Create a **_IAM user_** through AWS Console and add **_IAM Full Access_** permission and create a new policy with **_AWS text file_** and attach to the user.
 
-• Configure AWS*ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY in AWS configuration file using \*\*\_AWS CLI*\*\*.
+• Configure AWS **_ACCESS_KEY_ID_**, **_AWS_SECRET_ACCESS_KEY_** in AWS configuration file using **_AWS CLI_**.
 
 • Use the following commands
 
-> pip install zappa
-> zappa init
-> zappa deploy <envt>
+```sh
+$ pip install zappa
+$ zappa init
+$ zappa deploy <envt>
+```
 
-• IF you see the below error then  
+• If you see the below error then  
 Error: Warning! Status check on the deployed lambda failed. A GET request to '/' yielded a 500 response code.
 (Sometime you can find SQLITE version issue. Use compatible Version or use AWS RDS service for DB)
 
-> zappa tail
+```sh
+$ zappa tail
+```
 
 • The above command shows the error logs to analyze the issues. After solving the issue please update the deployment using below command.
 
-> zappa update <envt>
+```sh
+$ zappa update <envt>
+```
+
+• You can find the live URL for your web app once update is done.
+![zappa-update](readme_resources/updatecmd.JPG)
 
 • Please do ⭐ the repository, if it helped you in anyway.
