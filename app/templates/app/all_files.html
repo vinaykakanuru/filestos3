@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>All Files</title>
+</head>
+
+<body>
+    <div class="container-fluid my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <a class="btn btn-dark my-3" href="{% url 'add_file' %}">Home</a>
+                <table class="table table-success table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">File</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    {% for file in files %}
+                    <tr>
+                        <td><a href="{{file.file.url}}">{{file.file.name}}</a></td>
+                        <td>{{file.description}}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td>No Files available.</td>
+                        <td>
+                            <p>Please add a <a href="{% url 'add_file' %}">file</a> here</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

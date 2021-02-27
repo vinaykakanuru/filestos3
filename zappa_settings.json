@@ -1,0 +1,12 @@
+{
+    "dev": {
+        "aws_region": "us-east-1",
+        "django_settings": "filestos3.settings",
+        "profile_name": "default",
+        "project_name": "filestos3",
+        "runtime": "python3.7",
+        "s3_bucket": "filestos3-api",
+        "timeout_seconds": 300,
+        "memory_size": 1024
+    }
+}
